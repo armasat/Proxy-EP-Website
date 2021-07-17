@@ -1,0 +1,78 @@
+
+/* general styles */
+* {
+  box-sizing: border-box;
+}
+html{
+  height:100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+/* desktop styles */
+@media only screen and (min-width: 600px) {
+  #desktopContent{
+    display: block;
+  }
+  #mobileContent{
+    display: none;
+  }
+  #myVideo {
+    position: fixed;
+    width: 100%;
+    object-fit: fill;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .content {
+    position: fixed;
+    top: 35%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    transition: filter 5s;
+  }
+
+  .content_secondary {
+    position: fixed;
+    top:5%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    transition: filter 5s;
+  }
+
+  .blink_me {
+    animation: blinker 1s linear infinite;
+    cursor: pointer;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  audio { display:none;}
+
+}
+/* mobile styles  */
+@media only screen and (max-width: 600px) {
+  #desktopContent{
+    display: none;
+  }
+  #mobileContent{
+    display: block;
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+  }
+}
