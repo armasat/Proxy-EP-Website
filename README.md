@@ -16,7 +16,7 @@ https://soundcloud.com/pages/embed
 # EP Landing Page 
 Landing page for social posts, with embedded password prompt, and page forwarding to main content
 
-# More
-There are other features to this site that are very interesting but I would let you explore to find out, specifically the /assets & /scripts directories to see how the site operates
+# Note
+This repo is missing the /assets & /scripts directories
 
 
