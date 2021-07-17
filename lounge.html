@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+<!-- external css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/grid.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+-ms-overflow-style: -ms-autohiding-scrollbar; or -ms-overflow-style: none;
+body{
+    font-size: 115%!important;
+    color:#ededed;
+    font-family: 'Courier New', Courier, monospace!important;
+}
+input[type="text"], textarea {
+
+  background-color : #282828;
+  color:#FE5000;
+  font-family: 'Courier New', Courier, monospace;
+}
+</style>
+</head>
+
+<body onload="onLoad('lounge');">
+
+
+<div id="desktopContent" style="background:#A9A9A9;">
+  <!-- <video autoplay muted loop id="myVideo">
+    <source src="/assets/videos/lounge.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video> -->
+
+    <div style="background:white;height:25px;width:100%;position:fixed;top:0;left:0;padding-right:3%;">
+      <div style="text-align:right;width:100%;"><a href="/index.html" style="text-decoration:underlined;color:#FE5000">/<i style="font-family: 'Courier New', Courier, monospace;">home</i></a></div>
+    </div>
+    <div class="content" style="top:25px;height: 100vh;overflow: scroll;padding-bottom:15%;">
+
+      <style>
+      .clock {
+      border-radius: 100%;
+      font-family: "Montserrat";
+      border: 5px solid white;
+      box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .wrap {
+      overflow: hidden;
+      position: relative;
+      width: 350px;
+      height: 350px;
+      border-radius: 100%;
+      }
+
+      .minute,
+      .hour {
+      position: absolute;
+      height: 100px;
+      width: 6px;
+      margin: auto;
+      top: -27%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: white;
+      transform-origin: bottom center;
+      transform: rotate(0deg);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+      z-index: 1;
+      }
+
+      .minute {
+      position: absolute;
+      height: 130px;
+      width: 4px;
+      top: -38%;
+      left: 0;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+      transform: rotate(90deg);
+      }
+
+      .second {
+      position: absolute;
+      height: 90px;
+      width: 2px;
+      margin: auto;
+      top: -26%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 4px;
+      background: #FF4B3E;
+      transform-origin: bottom center;
+      transform: rotate(180deg);
+      z-index: 1;
+      }
+
+      .dot {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 100px;
+      background: transparent;
+      border: 2px solid #1b1b1b;
+      border-radius: 100px;
+      margin: auto;
+      z-index: 1;
+      }
+      </style>
+      <div style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: transparent;
+        width: 25%;
+        zoom: 0.3;
+        -moz-transform: scale(0.3);
+      ">
+        <div class="clock">
+          <div class="wrap">
+            <span class="hour"></span>
+            <span class="minute"></span>
+            <span class="second"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+      var inc = 1000;
+
+      clock();
+
+      function clock() {
+        const date = new Date();
+
+        const hours = ((date.getHours() + 11) % 12 + 1);
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+
+        const hour = hours * 30;
+        const minute = minutes * 6;
+        const second = seconds * 6;
+
+        document.querySelector('.hour').style.transform = `rotate(${hour}deg)`
+        document.querySelector('.minute').style.transform = `rotate(${minute}deg)`
+        document.querySelector('.second').style.transform = `rotate(${second}deg)`
+      }
+
+      setInterval(clock, inc);
+      </script>
+
+
+      <div class="row justify-content-center">
+        <div class="col">
+          <div style="padding:3%;padding-top:0%;text-align:center;">
+            <div class="row" style="width:unset;">
+              <div class="col">
+                <iframe width="500px" height="345px" src="https://www.youtube.com/embed/MVIiupmAxgM" title="YouTube video player" frameborder="0" allow="fullscreen;accelerometer;autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen"
+                msallowfullscreen="msallowfullscreen"
+                oallowfullscreen="oallowfullscreen"
+                webkitallowfullscreen="webkitallowfullscreen"></iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <!-- <i style="font-family: 'Courier New', Courier, monospace;">enter message here to user</i> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div style="padding:3%;padding-top:0%;text-align:center;">
+            <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" wrap="on" style="padding:2%;height:345px;width:500px;" placeholder="little notepad"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="width:100%;font-family: 'Courier New', Courier, monospace;padding:4%;">
+        <hr style="background:white;border-color:white;">
+        <h3>Apps</h3>
+        <div class="row justify-content-start">
+          <div class="col-auto">
+            <a target="_blank" href="https://live.com/" style="text-decoration:underlined;color:black">/<i style="font-family: 'Courier New', Courier, monospace;">Hotmail</i></a>
+          </div>
+          <div class="col-auto">
+            <a target="_blank" href="https://gmail.com/" style="text-decoration:underlined;color:black">/<i style="font-family: 'Courier New', Courier, monospace;">Gmail</i></a>
+          </div>
+        </div>
+        <div class="row justify-content-start">
+          <div class="col-auto">
+            <a target="_blank" href="https://twitter.com/" style="text-decoration:underlined;color:black">/<i style="font-family: 'Courier New', Courier, monospace;">Twitter</i></a>
+          </div>
+          <div class="col-auto">
+            <a target="_blank" href="https://soundcloud.com/" style="text-decoration:underlined;color:black">/<i style="font-family: 'Courier New', Courier, monospace;">Soundcloud</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div id="mobileContent">
+  <div style="width:100%;text-align:center;padding:7%;">
+    <h3>Please switch to a desktop environment to view the site.</h3>
+    <hr>
+    <img src="/assets/gifs/rose.gif" style="margin:2%;"/>
+  </div>
+</div>
+
+  <!-- main audio resource -->
+  <audio controls src="/assets/sounds/contemptible 打撃.wav" id="main_song">
+    <input type="hidden" id="main_song_name" value="contemptible 打撃 - Doxy">
+    <!-- external javascript -->
+    <script src="/scripts/js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

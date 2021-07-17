@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
+<!-- external css -->
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+body{
+    font-size: 225%!important;
+    font-family: 'Tangerine', cursive!important;
+}
+</style>
+</head>
+<body onload="onLoad('entry');">
+
+
+<div id="desktopContent">
+  <video autoplay muted loop id="myVideo">
+    <source src="/assets/videos/ausaSpin.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  <div class="content" id="content">
+    <div style="width:100%;text-align:center">
+
+          <div class="blink_me" onclick="playSound('menuClick1','exit');">
+            <p onmouseover="playSound('menuHover1','stay')">Enter Hub World</p>
+          </div>
+
+
+    </div>
+  </div>
+</div>
+<div id="mobileContent">
+  <div style="width:100%;text-align:center;padding:7%;">
+    <h3>Please switch to a desktop environment to view the site.</h3>
+    <hr>
+    <img src="/assets/gifs/rose.gif" style="margin:2%;"/>
+  </div>
+</div>
+
+  <!-- main audio resource -->
+  <audio controls autoplay="true" src="/assets/sounds/ambient.wav" id="main_song" autoplay="true">
+    <input type="hidden" id="main_song_name" value="Blessed - Ausa">
+    <!-- external javascript -->
+    <script src="/scripts/js.js"></script>
+</body>
+</html>

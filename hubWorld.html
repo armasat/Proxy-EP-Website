@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
+<!-- external css -->
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+
+body{
+    font-size: 225%!important;
+    font-family: 'Tangerine', cursive!important;
+}
+/* cube styles */
+.scene {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  perspective: 200px;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
+  transition: transform 1s;
+}
+
+.cube.show-front  { transform: translateZ(-50px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-50px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-50px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-50px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-50px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-50px) rotateX(  90deg); }
+
+.cube__face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ff7700;
+  line-height: 100px;
+  color: #ff7700;
+  text-align: center;
+}
+
+.cube__face:hover{
+  background: 	hsl(0, 0%, 100%,0.7);
+}
+
+.cube__face--front  { background: white;}
+.cube__face--right  { background: white; }
+.cube__face--back   { background: white; }
+.cube__face--left   { background: white; }
+.cube__face--top    { background: white; }
+.cube__face--bottom { background: white; }
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(50px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(50px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(50px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(50px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(50px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+label { margin-right: 10px; }
+</style>
+</head>
+
+<body onload="onLoad('hubWorld');">
+
+
+<div id="desktopContent">
+  <video autoplay muted loop id="myVideo">
+    <source src="/assets/videos/hubWorld.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content_secondary">
+      <!-- the cube -->
+      <div class="scene" style="float:right;">
+        <div class="cube" style="cursor:pointer;" onclick="navigateToTerminal();">
+          <div class="cube__face cube__face--front">T</div>
+          <div class="cube__face cube__face--back">T</div>
+          <div class="cube__face cube__face--right">T</div>
+          <div class="cube__face cube__face--left">T</div>
+          <div class="cube__face cube__face--top">T</div>
+          <div class="cube__face cube__face--bottom">T</div>
+        </div>
+      </div>
+      <div style="border-radius: 0.1em;border-width: thin;border-style: solid;border-color: white;height:auto;text-align:left;padding:2%;">
+        <p>Hello,</p>
+        <p id="welcome_message"></p>
+      </div>
+
+    </div>
+</div>
+<div id="mobileContent">
+  <div style="width:100%;text-align:center;padding:7%;">
+    <h3>Please switch to a desktop environment to view the site.</h3>
+    <hr>
+    <img src="/assets/gifs/rose.gif" style="margin:2%;"/>
+  </div>
+</div>
+
+  <!-- main audio resource -->
+  <audio controls autoplay="true" src="/assets/sounds/longAmbientHub.wav" id="main_song" autoplay="true">
+    <input type="hidden" id="main_song_name" value="Plantae Type: Lunar Tear(Ambient Edit) - Ausa">
+    <!-- external javascript -->
+    <script src="/scripts/js.js"></script>
+</body>
+</html>

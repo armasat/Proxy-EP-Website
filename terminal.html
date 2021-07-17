@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico"/>
+<!-- external css -->
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+-ms-overflow-style: -ms-autohiding-scrollbar; or -ms-overflow-style: none;
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+  font-style: italic;
+  width: 80%;
+}
+.no-outline:focus {
+  outline: none;
+}
+</style>
+</head>
+<body onload="onLoad('terminal');focusOnCommandLine();" onclick="focusOnCommandLine();">
+
+
+<div id="desktopContent">
+  <video autoplay muted loop id="myVideo">
+    <source src="/assets/videos/terminal.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  <div class="content" id="content" style="top:30%;overflow-y:scroll;height:65vh;width:auto;position: relative">
+    <div style="position:absolute;top:0%;left:0%;height:400px;width:100%;">
+      <span id="logSpan" style="padding:6%;padding-bottom: 2%;color:white;border: none;background: transparent;color:white;  font-family: 'Courier New', Courier, monospace;position:absolute;">
+        Enter <b>help</b> to find out more about the internal system commands.<br>
+        Different commands can be used to control the media player,navigate to different locations of the system, and soon play games or find easter eggs...
+        <hr>
+        If you have navigated here by accident enter the command <b>goback</b><br>
+      </span>
+    </div>
+  </div>
+  <span id="commandSpan" style="text-align:left;color:white;position: absolute;bottom: 0;padding-left:2%;padding-bottom:2%;">
+      <form onsubmit="submitCommand(document.getElementById('commandLine').value);return false;" autocomplete="off">
+        &gt; <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="commandLine" class="no-outline" type="text" style="height:50px;color:white;border: none;background: transparent;text-align:left;color:white;  font-family: 'Courier New', Courier, monospace;">
+      </form>
+    </span>
+</div>
+<div id="mobileContent">
+  <div style="width:100%;text-align:center;padding:7%;">
+    <h3>Please switch to a desktop environment to view the site.</h3>
+    <hr>
+    <img src="/assets/gifs/rose.gif" style="margin:2%;"/>
+  </div>
+</div>
+
+  <!-- main audio resource -->
+  <audio controls autoplay="true" src="/assets/sounds/tired.wav" id="main_song" autoplay="true">
+    <input type="hidden" id="main_song_name" value="Do you wish to proceed - Doxy">
+    <!-- external javascript -->
+    <script src="/scripts/js.js"></script>
+</body>
+</html>

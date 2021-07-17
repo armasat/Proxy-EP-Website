@@ -1,0 +1,3 @@
+# all groups can crawl all pages
+User-agent: *
+Allow: /
